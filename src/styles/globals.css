@@ -1,0 +1,523 @@
+/* ==========================================================
+   EC INDUSTRIAL TECHNOLOGIES PORTFOLIO
+   GLOBAL DESIGN SYSTEM
+   Version: 1.0
+========================================================== */
+
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+/* ===========================
+   CSS VARIABLES
+=========================== */
+
+:root {
+
+  /* Colors */
+
+  --color-primary: #22c55e;
+  --color-primary-dark: #16a34a;
+  --color-primary-light: #4ade80;
+
+  --color-secondary: #2563eb;
+
+  --color-background: #07111f;
+  --color-surface: #0f172a;
+  --color-card: #162032;
+
+  --color-white: #ffffff;
+
+  --color-text: #f8fafc;
+  --color-text-light: #cbd5e1;
+  --color-text-muted: #94a3b8;
+
+  --color-border: #233046;
+
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
+  /* Typography */
+
+  --font-primary: "Inter", sans-serif;
+
+  --fs-display: 72px;
+  --fs-h1: 54px;
+  --fs-h2: 42px;
+  --fs-h3: 30px;
+  --fs-h4: 24px;
+  --fs-body: 18px;
+  --fs-small: 16px;
+
+  /* Font Weight */
+
+  --fw-light:300;
+  --fw-regular:400;
+  --fw-medium:500;
+  --fw-semibold:600;
+  --fw-bold:700;
+  --fw-black:900;
+
+  /* Spacing */
+
+  --space-xs:8px;
+  --space-sm:16px;
+  --space-md:24px;
+  --space-lg:40px;
+  --space-xl:64px;
+  --space-2xl:96px;
+  --space-3xl:140px;
+
+  /* Radius */
+
+  --radius-sm:8px;
+  --radius-md:14px;
+  --radius-lg:20px;
+  --radius-xl:30px;
+  --radius-pill:999px;
+
+  /* Shadows */
+
+  --shadow-sm:0 5px 20px rgba(0,0,0,.15);
+
+  --shadow-md:0 15px 40px rgba(0,0,0,.25);
+
+  --shadow-lg:0 25px 70px rgba(0,0,0,.35);
+
+  --shadow-green:0 0 40px rgba(34,197,94,.25);
+
+  /* Width */
+
+  --container:1200px;
+
+  /* Transition */
+
+  --transition:.35s ease;
+
+}
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:var(--font-primary);
+
+    background:var(--color-background);
+
+    color:var(--color-text);
+
+    line-height:1.6;
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+input,
+textarea{
+
+    font-family:inherit;
+
+    outline:none;
+
+}
+
+section{
+
+    padding:120px 0;
+
+}
+
+::selection{
+
+    background:var(--color-primary);
+
+    color:white;
+
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+
+    width:min(92%,var(--container));
+
+    margin:auto;
+
+}
+
+/* ===========================
+   HEADINGS
+=========================== */
+
+h1{
+
+    font-size:var(--fs-h1);
+
+    font-weight:800;
+
+    line-height:1.1;
+
+}
+
+h2{
+
+    font-size:var(--fs-h2);
+
+    margin-bottom:24px;
+
+}
+
+h3{
+
+    font-size:var(--fs-h3);
+
+}
+
+h4{
+
+    font-size:var(--fs-h4);
+
+}
+
+p{
+
+    color:var(--color-text-light);
+
+    font-size:var(--fs-body);
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:16px 30px;
+
+    border-radius:var(--radius-pill);
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary{
+
+    background:var(--color-primary);
+
+    color:white;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--color-primary-dark);
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow-green);
+
+}
+
+.btn-outline{
+
+    border:2px solid var(--color-primary);
+
+    color:var(--color-primary);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--color-primary);
+
+    color:white;
+
+}
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+
+.section-title{
+
+    font-size:48px;
+
+    margin-bottom:18px;
+
+    text-align:center;
+
+}
+
+.section-subtitle{
+
+    color:var(--color-text-muted);
+
+    max-width:700px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.card{
+
+    background:var(--color-card);
+
+    border:1px solid var(--color-border);
+
+    border-radius:var(--radius-lg);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+/* ===========================
+   UTILITIES
+=========================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-primary{
+
+    color:var(--color-primary);
+
+}
+
+.mt-1{
+
+    margin-top:var(--space-sm);
+
+}
+
+.mt-2{
+
+    margin-top:var(--space-md);
+
+}
+
+.mt-3{
+
+    margin-top:var(--space-lg);
+
+}
+
+.mb-1{
+
+    margin-bottom:var(--space-sm);
+
+}
+
+.mb-2{
+
+    margin-bottom:var(--space-md);
+
+}
+
+.mb-3{
+
+    margin-bottom:var(--space-lg);
+
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+.fade-up{
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--color-background);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--color-primary);
+
+    border-radius:999px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+    h1{
+
+        font-size:44px;
+
+    }
+
+    h2{
+
+        font-size:36px;
+
+    }
+
+    section{
+
+        padding:90px 0;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:36px;
+
+    }
+
+    h2{
+
+        font-size:30px;
+
+    }
+
+    p{
+
+        font-size:17px;
+
+    }
+
+    section{
+
+        padding:80px 0;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    h1{
+
+        font-size:32px;
+
+    }
+
+    h2{
+
+        font-size:26px;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+    }
+
+}
